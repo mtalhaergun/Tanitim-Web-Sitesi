@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"/>
+<title>Login</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo"><img src="images/sau.png"></div>  
+        <div class="menu">
+        <div class="container">
+	    <ul class="menu-ul" align="right">
+		<a href="proje.html"><li class="menu-li">HAKKINDA</li></a>
+        <a href="özgeçmiş.html"><li class="menu-li">ÖZGEÇMİŞ</li></a>
+		<a href="şehrim.html"><li class="menu-li">ŞEHRİM</li></a>
+        <a href="takımımız.html"><li class="menu-li">TAKIMIMIZ</li></a>
+		<a href="iletisim.html"><li class="menu-li">İLETİŞİM</li></a>
+        <a href="login.html"><li class="menu-li">LOGIN</li></a>
+	</ul>
+    </div>
+</div>
+</div>
+</header>
+<form action="islem.php" method="post">
+    <div class="form-group1">
+      <label for="exampleInputEmail1"><b>Kullanıcı Adı:</b></label>
+      <input type="text" class="form-control" name="kullaniciadi" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group2">
+      <label for="exampleInputPassword1"><b>Şifre:</b></label>
+      <input type="password" class="form-control" name="sifre" id="exampleInputPassword1">
+    </div>
+    <button type="submit" name="giris" class="btn btn-primary">Giriş Yap</button>
+    <div class="maviArka"></div>
+  </form>
+</body>
+</html>

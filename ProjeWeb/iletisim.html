@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"/>
+<title>İletişim</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo"><img src="images/sau.png"></div>  
+        <div class="menu">
+        <div class="container">
+	    <ul class="menu-ul" align="right">
+		<a href="proje.html"><li class="menu-li">HAKKINDA</li></a>
+        <a href="özgeçmiş.html"><li class="menu-li">ÖZGEÇMİŞ</li></a>
+		<a href="şehrim.html"><li class="menu-li">ŞEHRİM</li></a>
+        <a href="takımımız.html"><li class="menu-li">TAKIMIMIZ</li></a>
+		<a href="iletisim.html"><li class="menu-li">İLETİŞİM</li></a>
+        <a href="login.html"><li class="menu-li">LOGIN</li></a>
+	</ul>
+    </div>
+</div>
+    </div>
+</header>
+    
+<form name="index" action="" method="">
+    <div class="ad"> <input  placeholder="Adınız" type="text" size="50" name="isim"></div>
+    <div class="soyad"> <input  placeholder="Soyadınız" type="text" size="50" name="soyad"></div>
+    <div class="cinsiyet">Cinsiyetiniz: <input type="radio" name="cinsiyet">Erkek <input type="radio" name="cinsiyet">Bayan</div>
+    <div class="email"><input placeholder="E-Posta Adresiniz" size="50" name="email" type="email" required> </div>
+    <div class="mesaj"><textarea cols="47" rows="10" name="mesaj" placeholder="Lütfen Mesajınızı Buraya Yazın.."  required></textarea></div>
+    <div class="butoniletisim"><button name="submit2" type="submit" id="submit"  >GÖNDER</button></div>
+</form>
+    
+<div class="yesil2"></div>
+<div class="iletisimyazi">İLETİŞİM</div> 
+    
+<script src="js/javas.js"></script>
+<script type="text/javascript">
+  function kontrol()
+  {
+   var isim_= document.index.isim.value;
+   var soyisim_= document.index.soyad.value;
+   var email_= document.index.email.value;
+   var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+   var cinsiyet_= document.index.cinsiyet.value;
+   var mesaj_ = document.index.mesaj.value;
+    if (isim=="") 
+	{
+	   alert("İsim alanı boş geçilemez!");
+      return false;
+    } 
+	else if (soyisim_=="") 
+	{
+	   alert("Soyisim alanı boş geçilemez");
+     return false;
+    } 
+	else if ( reg.test(email_) == false) 
+	{
+	   alert("E-Mailinizi hatalı girdiniz!");
+       return false;
+    } 
+	else if (cinsiyet_==0) 
+	{
+	   alert("Cinsiyet alanı boş geçilemez!");
+       return false;
+    } 
+
+	else if (mesaj_==0) 
+	{
+	   alert("Mesaj alanı boş geçilemez!");
+       return false;
+    } 
+	else
+	{
+        document.write("İsim: ",isim_, "<br>");
+        document.write("Soyisim: ",soyisim_,"<br>");
+        document.write("Email: ",email_,"<br>");
+        document.write("Cinsiyet: ",cinsiyet_,"<br>");
+        document.write("Mesaj: ",mesaj_,"<br>");
+    }
+  }
+</script>
+
+
+
+</body>
+</html>
